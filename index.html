@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newson Travel 1 LLC | Travel For All Your Needs</title>
+  <style>
+    :root {
+      --rust: #a34e2e;
+      --orange: #cc6b33;
+      --gold: #d9b36e;
+      --cream: #fff8f1;
+      --white: #ffffff;
+      --brown: #4d2b1f;
+      --dark: #241611;
+      --text: #433129;
+      --shadow: rgba(0, 0, 0, 0.08);
+      --shadow-strong: rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    h1, h2, h3, h4 {
+      line-height: 1.2;
+    }
+
+    .luxury-btn {
+      display: inline-block;
+      padding: 15px 32px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--orange), var(--rust));
+      color: white;
+      font-weight: 700;
+      margin: 8px;
+      transition: 0.3s ease;
+    }
+
+    .luxury-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0;
+    }
+
+    .logo {
+      height: 70px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 25px;
+      font-weight: 600;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+        url('boardwalk.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .advisor-section {
+      background: white;
+    }
+
+    .advisor-grid {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .advisor-photo {
+      border-radius: 30px;
+      box-shadow: 0 20px 50px var(--shadow-strong);
+    }
+
+    .signature {
+      margin-top: 20px;
+      max-width: 250px;
+    }
+
+    .advisor-content h2 {
+      font-size: 3rem;
+      color: var(--brown);
+      margin-bottom: 25px;
+    }
+
+    .advisor-content p {
+      margin-bottom: 20px;
+    }
+
+    .trust-logos {
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+      align-items: center;
+    }
+
+    .trust-logos img {
+      max-height: 90px;
+    }
+
+    .concierge {
+      background: linear-gradient(135deg, #ffffff, #fff5eb);
+    }
+
+    .concierge h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--brown);
+    }
+
+    .concierge p {
+      max-width: 900px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .benefits div {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    .booking-options {
+      background: var(--cream);
+    }
+
+    .booking-options h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 50px;
+    }
+
+    .option-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .booking-card {
+      background: white;
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px var(--shadow);
+    }
+
+    .booking-card h3 {
+      margin-bottom: 25px;
+    }
+
+    .booking-card ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .booking-card li {
+      padding: 8px 0;
+    }
+
+    .premium-card {
+      border: 2px solid rgba(217, 179, 110, 0.35);
+      background: linear-gradient(180deg, white, #fff8f1);
+    }
+
+    .card-badge {
+      display: inline-block;
+      background: var(--gold);
+      padding: 8px 15px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 15px;
+      margin-top: 20px;
+    }
+
+    .feature-item {
+      font-size: 0.98rem;
+    }
+
+    .luxury-promise {
+      background: rgba(217, 179, 110, 0.12);
+      padding: 25px;
+      margin-top: 25px;
+      border-radius: 18px;
+    }
+
+    .featured-deals {
+      background: white;
+    }
+
+    .featured-deals h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 3rem;
+    }
+
+    .deal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .deal-card {
+      background: #fff7f0;
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px var(--shadow);
+      text-align: center;
+    }
+
+    .destinations {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
+        url('2060958.jpg sunset.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+    }
+
+    .destinations h2 {
+      font-size: 3rem;
+      margin-bottom: 50px;
+    }
+
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .destination-grid div {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    .contact {
+      text-align: center;
+      background: white;
+    }
+
+    .contact h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 40px 0;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+
+    @media (max-width: 900px) {
+      .advisor-grid,
+      .option-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .deal-grid,
+      .destination-grid,
+      .benefits,
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <img src="logo.png" alt="Newson Travel 1 LLC" class="logo" />
+      <nav>
+        <a href="#advisor">Advisor</a>
+        <a href="#concierge">Concierge</a>
+        <a href="#booking">Booking</a>
+        <a href="#deals">Deals</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Newson Travel 1 LLC</h1>
+      <div class="tagline">Travel For All Your Needs</div>
+      <p>
+        Luxury vacations, cruises, resorts, business travel, rail journeys,
+        weekend escapes, and personalized travel planning designed around your needs.
+      </p>
+      <div>
+        <a href="#contact" class="luxury-btn">Plan My Vacation</a>
+        <a href="#booking" class="luxury-btn">Book Online</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="advisor" class="advisor-section">
+    <div class="container advisor-grid">
+      <div>
+        <img src="advisor.jpg" alt="Travel Advisor" class="advisor-photo" />
+        <img src="signature.png" alt="Signature" class="signature" />
+      </div>
+
+      <div class="advisor-content">
+        <h2>Meet Your Travel Advisor</h2>
+        <p>
+          Welcome to Newson Travel 1 LLC. I provide personal assistance with cruises,
+          vacation packages, rail journeys, resort stays, honeymoons, theme park vacations,
+          and group travel.
+        </p>
+        <p>
+          My goal is to make planning easier and help you create a vacation that fits your
+          needs, interests, and budget.
+        </p>
+
+        <h3>Founder &amp; Travel Advisor</h3>
+        <p>📞 601-331-9414</p>
+        <p>📧 youragent1@newsontravel1.com</p>
+
+        <a href="#contact" class="luxury-btn">Plan My Vacation</a>
+
+        <div class="trust-logos">
+          <img src="logo.png" alt="Newson Travel 1" />
+          <img src="iatan.png" alt="IATAN" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="concierge" class="concierge">
+    <div class="container">
+      <h2>Luxury Travel Concierge</h2>
+      <p>
+        Whether you're planning a quick weekend getaway or the vacation of a lifetime,
+        Newson Travel 1 provides personalized travel planning tailored to your preferences,
+        schedule, and budget.
+      </p>
+
+      <div class="benefits">
+        <div>✓ Personalized Vacation Planning</div>
+        <div>✓ Cruise Expertise</div>
+        <div>✓ Rail Vacation Planning</div>
+        <div>✓ Business Travel Assistance</div>
+        <div>✓ Solo Travel Planning</div>
+        <div>✓ Group Travel Coordination</div>
+        <div>✓ Hotel &amp; Resort Recommendations</div>
+        <div>✓ Air Travel Assistance</div>
+        <div>✓ Weekend Escapes</div>
+        <div>✓ Support Before, During &amp; After Travel</div>
+      </div>
+
+      <br /><br />
+      <div style="text-align: center;">
+        <a href="#contact" class="luxury-btn">Schedule My Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking-options">
+    <div class="container">
+      <h2>How Do You Prefer To Book?</h2>
+
+      <div class="option-grid">
+        <div class="booking-card">
+          <h3>🌐 Self-Service Booking</h3>
+          <p>
+            Perfect for travelers who enjoy flexibility, instant booking, and the freedom to
+            manage their travel arrangements online.
+          </p>
+
+          <ul>
+            <li>✓ Flights</li>
+            <li>✓ Hotels &amp; Resorts</li>
+            <li>✓ Cruises</li>
+            <li>✓ Vacation Packages</li>
+            <li>✓ Rental Cars</li>
+            <li>✓ Instant Confirmations</li>
+            <li>✓ Self-Service Convenience</li>
+          </ul>
+
+          <br />
+          <a href="#contact" class="luxury-btn">Search &amp; Book Online</a>
+        </div>
+
+        <div class="booking-card premium-card">
+          <span class="card-badge">Personalized Service</span>
+          <h3>✨ Personalized Travel Planning</h3>
+          <p class="card-intro">
+            Work directly with a travel advisor for a customized travel experience designed
+            around your goals, preferences, schedule, and budget.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature-item">✓ Cruise Planning</div>
+            <div class="feature-item">✓ Rail Vacations</div>
+            <div class="feature-item">✓ Vacation Packages</div>
+            <div class="feature-item">✓ Air Travel</div>
+            <div class="feature-item">✓ Hotels &amp; Resorts</div>
+            <div class="feature-item">✓ Car Rentals</div>
+            <div class="feature-item">✓ Business Travel</div>
+            <div class="feature-item">✓ Solo Travel</div>
+            <div class="feature-item">✓ Group Travel</div>
+            <div class="feature-item">✓ Weekend Getaways</div>
+            <div class="feature-item">✓ Customized Itineraries</div>
+            <div class="feature-item">✓ Professional Recommendations</div>
+            <div class="feature-item">✓ Support Before, During &amp; After Travel</div>
+          </div>
+
+          <div class="luxury-promise">
+            <h4>Luxury Concierge Promise</h4>
+            <p>
+              From the first conversation to your return home, every detail is planned with
+              personal attention and professional guidance. Whether you're seeking a relaxing
+              beach escape, a luxury cruise, a rail journey, a business trip, or a special
+              celebration, Newson Travel 1 is here to help create a seamless travel experience.
+            </p>
+          </div>
+
+          <br />
+          <a href="#contact" class="luxury-btn">Plan My Vacation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="deals" class="featured-deals">
+    <div class="container">
+      <h2>Featured Deals</h2>
+      <div class="deal-grid">
+        <div class="deal-card">
+          <h3>Beach Escape</h3>
+          <p>4-night tropical getaway with resort credit and airport transfers.</p>
+        </div>
+        <div class="deal-card">
+          <h3>Luxury Cruise</h3>
+          <p>7-day premium sailing with onboard perks and specialty dining.</p>
+        </div>
+        <div class="deal-card">
+          <h3>Rail Journey</h3>
+          <p>Scenic rail vacation with hotel stays and guided excursions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="destinations">
+    <div class="container">
+      <h2>Where Will Your Next Story Begin?</h2>
+      <p style="max-width: 700px; margin: 0 auto 50px;">
+        Escape to stunning beaches, vibrant cultures, unforgettable cruises, luxury resorts,
+        scenic rail journeys, and once-in-a-lifetime travel experiences.
+      </p>
+
+      <div class="destination-grid">
+        <div>🌺<br /><br />Hawaii</div>
+        <div>🏝️<br /><br />Jamaica</div>
+        <div>☀️<br /><br />Cancun</div>
+        <div>🌊<br /><br />Punta Cana</div>
+        <div>💎<br /><br />Aruba</div>
+        <div>🏰<br /><br />Europe</div>
+      </div>
+
+      <br /><br />
+      <a href="#contact" class="luxury-btn">Explore Destinations</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Ready To Start Planning?</h2>
+      <p style="max-width: 700px; margin: 20px auto 40px; font-size: 1.1rem;">
+        Your next journey begins with a conversation. Whether you're planning a luxury cruise,
+        rail vacation, business trip, weekend escape, or dream vacation, Newson Travel 1 LLC is
+        ready to help bring your travel plans to life.
+      </p>
+
+      <div class="contact-actions">
+        <div>
+          <h3>📞 Call</h3>
+          <p>601-331-9414</p>
+        </div>
+
+        <div>
+          <h3>📧 Email</h3>
+          <p>youragent1@newsontravel1.com</p>
+        </div>
+      </div>
+
+      <a href="tel:+16013319414" class="luxury-btn">Call Now</a>
+      <a href="mailto:youragent1@newsontravel1.com" class="luxury-btn">Email Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Newson Travel 1 LLC</h3>
+    <p>Travel For All Your Needs</p>
+    <p>📞 601-331-9414</p>
+    <p>📧 youragent1@newsontravel1.com</p>
+    <p>Privacy Policy | Terms &amp; Conditions</p>
+    <p>© 2026 Newson Travel 1 LLC. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
