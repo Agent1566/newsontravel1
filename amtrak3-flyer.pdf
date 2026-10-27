@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amtrak Tips & Booking — Newson Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Newson Travel" class="logo-img">
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#destinations">Destinations</a></li>
+                <li><a href="air.travel.html">Air Travel</a></li>
+                <li><a href="cruises.html">Cruises</a></li>
+                <li><a href="car-rentals.html">Car Rentals</a></li>
+                <li><a href="group.travel.html">Group Travel</a></li>
+                <li><a href="honeymoon.html">Honeymoon</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="resorts.html">Resorts</a></li>
+                <li><a href="rail-travel.html">Rail Travel</a></li>
+                <li><a href="travel-inspiration.html">Inspiration</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="min-height: 50vh; background: linear-gradient(160deg, #C17B5A 0%, #8A9A7B 50%, #D4A574 100%);">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Amtrak Tips & Booking</p>
+            <h1 class="hero-title" style="font-size: clamp(2rem, 5vw, 3.5rem);">Make the Most of Your Journey</h1>
+            <p class="hero-subtitle" style="color: rgba(255,252,247,0.9);">Expert tips for booking, seating, and enjoying every mile of your train trip.</p>
+            <div class="hero-actions">
+                <a href="amtrak-travel.html" class="btn btn-primary">← Back to Amtrak Travel</a>
+                <a href="index.html#contact" class="btn btn-ghost" style="color: var(--white); border-color: rgba(255,252,247,0.4);">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro" style="padding-top: 60px;">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-eyebrow">Booking Tips</p>
+                <h2 class="section-title">How to Book Smarter</h2>
+                <p class="section-desc">Save money and get the best seats with these insider tips.</p>
+            </div>
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <div class="intro-icon">📅</div>
+                    <h3>Book Early</h3>
+                    <p>Amtrak fares increase as the travel date approaches. Book 2–3 months ahead for the best prices, especially in autumn.</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">💺</div>
+                    <h3>Choose Your Seat</h3>
+                    <p>Upper level seats offer the best views. On scenic routes, request a window seat on the sightseeing side.</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">🛏️</div>
+                    <h3>Consider a Roomette</h3>
+                    <p>On overnight routes, a Roomette gives you a private space with a bed and included meals — great value for long trips.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-eyebrow">Onboard Experience</p>
+                <h2 class="section-title">What to Expect Onboard</h2>
+                <p class="section-desc">Amtrak offers more than just a ride — it's part of the journey.</p>
+            </div>
+            <div class="dest-grid">
+                <article class="dest-card">
+                    <div class="dest-image" style="background: linear-gradient(135deg, #C17B5A, #D4A574); height: 180px;">
+                        <div class="dest-image-inner"><span class="dest-emoji">🍽️</span></div>
+                    </div>
+                    <div class="dest-body">
+                        <span class="dest-tag">Dining</span>
+                        <h3>Dining Car</h3>
+                        <p>Full-service dining on long-distance routes with regional dishes and seasonal menus.</p>
+                    </div>
+                </article>
+                <article class="dest-card">
+                    <div class="dest-image" style="background: linear-gradient(135deg, #8A9A7B, #C17B5A); height: 180px;">
+                        <div class="dest-image-inner"><span class="dest-emoji">🪟</span></div>
+                    </div>
+                    <div class="dest-body">
+                        <span class="dest-tag">Views</span>
+                        <h3>Sightseeing Lounge</h3>
+                        <p>Glass-domed observation cars with panoramic windows — the best seats for scenery.</p>
+                    </div>
+                </article>
+                <article class="dest-card">
+                    <div class="dest-image" style="background: linear-gradient(135deg, #D4A574, #8A9A7B); height: 180px;">
+                        <div class="dest-image-inner"><span class="dest-emoji">📶</span></div>
+                    </div>
+                    <div class="dest-body">
+                        <span class="dest-tag">Connectivity</span>
+                        <h3>Wi-Fi & Power</h3>
+                        <p>Free Wi-Fi on most routes with power outlets at every seat — stay connected and charged.</p>
+                    </div>
+                </article>
+                <article class="dest-card">
+                    <div class="dest-image" style="background: linear-gradient(135deg, #B8860B, #D4A574); height: 180px;">
+                        <div class="dest-image-inner"><span class="dest-emoji">🧳</span></div>
+                    </div>
+                    <div class="dest-body">
+                        <span class="dest-tag">Luggage</span>
+                        <h3>Baggage Policy</h3>
+                        <p>Two carry-ons and two personal items free. Checked baggage available on long-distance routes.</p>
+                    </div>
+                </article>
+                <article class="dest-card">
+                    <div class="dest-image" style="background: linear-gradient(135deg, #C17B5A, #B8860B); height: 180px;">
+                        <div class="dest-image-inner"><span class="dest-emoji">🚻</span></div>
+                    </div>
+                    <div class="dest-body">
+                        <span class="dest-tag">Accessibility</span>
+                        <h3>Accessible Travel</h3>
+                        <p>Wheelchair-accessible cars, assistance boarding, and dedicated support for travelers with disabilities.</p>
+                    </div>
+                </article>
+                <article class="dest-card">
+                    <div class="dest-image" style="background: linear-gradient(135deg, #8A9A7B, #D4A574); height: 180px;">
+                        <div class="dest-image-inner"><span class="dest-emoji">🐕</span></div>
+                    </div>
+                    <div class="dest-body">
+                        <span class="dest-tag">Pets</span>
+                        <h3>Pets Welcome</h3>
+                        <p>Small dogs and cats travel with you on most routes for a small fee — up to 20 lbs in a carrier.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-eyebrow">Amtrak Resources</p>
+                <h2 class="section-title">Flyers & Guides</h2>
+            </div>
+            <div class="services-grid">
+                <a href="amtrak-flyer.pdf" target="_blank" class="service-card">
+                    <div class="service-icon">📄</div>
+                    <h3>Amtrak Flyer</h3>
+                    <p>Current special offers and promotions.</p>
+                </a>
+                <a href="amtrak-travel.html" class="service-card">
+                    <div class="service-icon">🚆</div>
+                    <h3>Amtrak Travel</h3>
+                    <p>Overview of popular routes and benefits.</p>
+                </a>
+                <a href="amtrak2-travel.html" class="service-card">
+                    <div class="service-icon">🎫</div>
+                    <h3>Routes & Passes</h3>
+                    <p>Explore rail passes and multi-route options.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-text">
+                    <p class="section-eyebrow">Need Help?</p>
+                    <h2 class="section-title">Let Us Book Your Train</h2>
+                    <p>We'll handle the booking, seating, and scheduling — you just enjoy the ride.</p>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').classList.add('show'); this.querySelector('button').textContent='Sent! ✓';">
+                    <input type="text" placeholder="Your name" required>
+                    <input type="email" placeholder="Email address" required>
+                    <input type="text" placeholder="Route or destination">
+                    <textarea placeholder="Tell us about your train travel plans..." rows="3"></textarea>
+                    <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                    <p class="form-success">Thank you! We'll be in touch within 48 hours. 🚆</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><span class="logo-mark">🍂</span><span class="logo-text">Newson Travel</span></a>
+                <p>Soft journeys, golden horizons. Curated autumn travel experiences since 2014.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Travel Services</h4>
+                <a href="air.travel.html">Air Travel</a>
+                <a href="cruises.html">Cruises</a>
+                <a href="car-rentals.html">Car Rentals</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="resorts.html">Resorts</a>
+                <a href="rail-travel.html">Rail Travel</a>
+            </div>
+            <div class="footer-links">
+                <h4>More</h4>
+                <a href="group.travel.html">Group Travel</a>
+                <a href="honeymoon.html">Honeymoons</a>
+                <a href="travel-inspiration.html">Inspiration</a>
+                <a href="qoute-request.html">Request a Quote</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Cruise Lines</h4>
+                <a href="ncl-cruise.html">Norwegian Cruise Line</a>
+                <a href="royal-caribbean.html">Royal Caribbean</a>
+                <a href="virgin-voyage.html">Virgin Voyages</a>
+                <a href="carinval cruise.flyer.pdf" target="_blank">Carnival Flyer</a>
+                <a href="amtrak-flyer.pdf" target="_blank">Amtrak Flyer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Newson Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); navToggle.classList.toggle('active'); });
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); navLinks.classList.remove('open'); navToggle.classList.remove('active'); }
+            });
+        });
+    </script>
+</body>
+</html>
