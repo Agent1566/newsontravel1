@@ -6,16 +6,19 @@
   <title>Newson Travel 1 LLC | Travel For All Your Needs</title>
   <style>
     :root {
-      --rust: #a34e2e;
-      --orange: #cc6b33;
-      --gold: #d9b36e;
-      --cream: #fff8f1;
+      --rust: #9a432f;
+      --orange: #d97732;
+      --gold: #d4a14a;
+      --cream: #f8f1e7;
       --white: #ffffff;
-      --brown: #4d2b1f;
+      --brown: #4a2c22;
       --dark: #241611;
-      --text: #433129;
+      --text: #45312a;
       --shadow: rgba(0, 0, 0, 0.08);
       --shadow-strong: rgba(0, 0, 0, 0.15);
+      --forest: #596d46;
+      --sage: #7d8d6f;
+      --maple: #b85c2d;
     }
 
     * {
@@ -67,6 +70,7 @@
       font-weight: 700;
       margin: 8px;
       transition: 0.3s ease;
+      box-shadow: 0 10px 20px rgba(154, 67, 47, 0.18);
     }
 
     .luxury-btn:hover {
@@ -106,7 +110,7 @@
     .hero {
       min-height: 100vh;
       background:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+        linear-gradient(rgba(28, 20, 16, 0.42), rgba(35, 25, 18, 0.6)),
         url('boardwalk.jpg');
       background-size: cover;
       background-position: center;
@@ -149,14 +153,26 @@
       align-items: center;
     }
 
+    .advisor-portrait {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
     .advisor-photo {
+      display: block;
+      width: 100%;
+      max-width: 350px;
       border-radius: 30px;
       box-shadow: 0 20px 50px var(--shadow-strong);
     }
 
     .signature {
-      margin-top: 20px;
-      max-width: 250px;
+      display: block;
+      width: 180px;
+      max-width: 70%;
+      margin-top: 4px;
     }
 
     .advisor-content h2 {
@@ -181,7 +197,7 @@
     }
 
     .concierge {
-      background: linear-gradient(135deg, #ffffff, #fff5eb);
+      background: linear-gradient(135deg, #fffaf5, #f5e6d6);
     }
 
     .concierge h2 {
@@ -210,6 +226,7 @@
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 10px 30px var(--shadow);
+      color: var(--brown);
     }
 
     .booking-options {
@@ -249,8 +266,8 @@
     }
 
     .premium-card {
-      border: 2px solid rgba(217, 179, 110, 0.35);
-      background: linear-gradient(180deg, white, #fff8f1);
+      border: 2px solid rgba(212, 161, 74, 0.45);
+      background: linear-gradient(180deg, white, #fff5e5);
     }
 
     .card-badge {
@@ -262,6 +279,7 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       font-weight: 700;
+      color: var(--brown);
     }
 
     .feature-list {
@@ -276,7 +294,7 @@
     }
 
     .luxury-promise {
-      background: rgba(217, 179, 110, 0.12);
+      background: rgba(212, 161, 74, 0.12);
       padding: 25px;
       margin-top: 25px;
       border-radius: 18px;
@@ -299,17 +317,18 @@
     }
 
     .deal-card {
-      background: #fff7f0;
+      background: #fff4e8;
       padding: 40px;
       border-radius: 24px;
       box-shadow: 0 15px 40px var(--shadow);
       text-align: center;
+      color: var(--brown);
     }
 
     .destinations {
       background:
-        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
-        url('2060958.jpg sunset.jpg');
+        linear-gradient(rgba(33, 20, 15, 0.35), rgba(58, 36, 25, 0.65)),
+        url('sunset.jpg');
       background-size: cover;
       background-position: center;
       color: white;
@@ -417,7 +436,7 @@
 
   <section id="advisor" class="advisor-section">
     <div class="container advisor-grid">
-      <div>
+      <div class="advisor-portrait">
         <img src="advisor.jpg" alt="Travel Advisor" class="advisor-photo" />
         <img src="signature.png" alt="Signature" class="signature" />
       </div>
