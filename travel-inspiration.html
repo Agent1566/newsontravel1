@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Travel inspiration, destination ideas, seasonal guides, and curated vacation inspiration from Newson Travel 1 LLC." />
+  <title>Travel Inspiration | Newson Travel 1 LLC</title>
+  <style>
+    :root {
+      --orange: #c8642e;
+      --orange-deep: #a84d2c;
+      --brown: #5a3025;
+      --brown-deep: #321b16;
+      --cream: #fff7f0;
+      --ivory: #fffdfb;
+      --white: #ffffff;
+      --text: #3f2b25;
+      --muted: #756561;
+      --shadow: rgba(90, 48, 37, 0.12);
+      --shadow-strong: rgba(50, 27, 22, 0.18);
+      --sage: #8a9a7b;
+      --gold: #d4a574;
+      --sand: #e9d9c6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--ivory);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--brown-deep);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(58, 31, 25, 0.09);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--brown);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.8);
+      padding: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--brown);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+    .nav-cta {
+      background: var(--orange);
+      color: var(--white) !important;
+      padding: 10px 16px;
+      border-radius: 999px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid rgba(58,31,25,0.2);
+      background: var(--white);
+      color: var(--brown);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 58vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--white);
+      background:
+        linear-gradient(rgba(38, 20, 16, 0.52), rgba(38, 20, 16, 0.72)),
+        url('sunset.jpg') center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      padding: 70px 20px 30px;
+    }
+
+    .eyebrow {
+      color: #f2d9a5;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 800;
+      font-size: 0.78rem;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(2.5rem, 5vw, 4.1rem);
+      color: var(--white);
+      margin-bottom: 18px;
+      line-height: 1.08;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    section { padding: 90px 0; }
+
+    .section-head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 42px;
+    }
+
+    .section-head h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .inspire-card {
+      background: var(--white);
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(90, 48, 37, 0.08);
+      box-shadow: 0 18px 40px var(--shadow);
+    }
+
+    .card-image {
+      height: 230px;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .card-body {
+      padding: 25px 22px 28px;
+    }
+
+    .card-tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      background: rgba(200,100,46,0.12);
+      color: var(--brown);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .card-body h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--brown);
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .card-link {
+      display: inline-block;
+      font-weight: 700;
+      color: var(--orange-deep);
+    }
+
+    .highlight {
+      background: linear-gradient(180deg, #fff7f0 0%, #f5e8dc 100%);
+    }
+
+    .feature-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .feature-panel {
+      background: var(--white);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(90,48,37,0.06);
+      box-shadow: 0 18px 40px var(--shadow);
+    }
+
+    .feature-photo {
+      height: 360px;
+      background:
+        linear-gradient(rgba(38, 20, 16, 0.15), rgba(38, 20, 16, 0.15)),
+        url('broardwalk.jpg') center/cover no-repeat;
+    }
+
+    .feature-copy {
+      padding: 30px 26px 32px;
+    }
+
+    .feature-copy h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 2.2rem;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .feature-copy p {
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .mini-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .mini-list span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(200,100,46,0.12);
+      color: var(--brown);
+      font-size: 0.73rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .note-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .note-card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 22px 18px;
+      border: 1px solid rgba(90,48,37,0.08);
+      box-shadow: 0 14px 24px var(--shadow);
+    }
+
+    .note-card h4 {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--brown);
+      margin-bottom: 8px;
+      font-size: 1.6rem;
+    }
+
+    .note-card p {
+      color: var(--muted);
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #5a3025, #8f4d37 55%, #a84d2c);
+      color: var(--white);
+      text-align: center;
+      padding: 90px 0;
+    }
+
+    .cta h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 760px;
+      margin: 0 auto 26px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 13px 28px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--brown);
+    }
+
+    footer {
+      background: var(--brown-deep);
+      color: rgba(255,255,255,0.82);
+      padding: 60px 0 26px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-links p {
+      color: rgba(255,255,255,0.76);
+      line-height: 1.8;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 6px;
+    }
+
+    .footer-links h4 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 28px;
+      margin-top: 26px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 980px) {
+      .cards-grid,
+      .footer-grid,
+      .feature-wrap {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--white);
+        border-bottom: 1px solid rgba(58,31,25,0.08);
+        padding: 18px 5%;
+        box-shadow: 0 12px 22px rgba(58,31,25,0.08);
+      }
+
+      .nav-links.open { display: flex; }
+
+      .cards-grid,
+      .footer-grid,
+      .feature-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Travel For All Your Needs</div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="Newson Travel 1 LLC logo" />
+        <span>Newson Travel 1 LLC</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="featured-deals.html">Featured Deals</a></li>
+        <li><a href="vacation-packages.html">Vacation Packages</a></li>
+        <li><a href="msc-cruises.html">Cruises</a></li>
+        <li><a href="rail-vacations.html">Rail Vacations</a></li>
+        <li><a href="travel-inspiration.html">Inspiration</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Ideas &amp; Guides</p>
+      <h1>Travel Inspiration</h1>
+      <p>Discover seasonal escapes, destination ideas, and thoughtfully curated travel moments designed to spark your next unforgettable journey.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" style="color: var(--orange-deep);">Featured Articles</p>
+        <h2>Seasonal travel guides</h2>
+        <p>Fresh ideas for every kind of traveler — whether you're planning a romantic escape, a family adventure, or a scenic rail getaway.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="inspire-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #b96e45, #d7a06b);">🍂</div>
+          <div class="card-body">
+            <span class="card-tag">Autumn</span>
+            <h3>10 Best Fall Foliage Drives</h3>
+            <p>From mountain roads to coastal routes, uncover the most scenic destinations for autumn color and cooler weather.</p>
+            <a href="featured-deals.html" class="card-link">Explore deals →</a>
+          </div>
+        </article>
+
+        <article class="inspire-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #7e8c6a, #b96e45);">🍷</div>
+          <div class="card-body">
+            <span class="card-tag">Food &amp; Wine</span>
+            <h3>Harvest Season Wine Tours</h3>
+            <p>Golden vineyards, tasting rooms, and slow afternoons create the perfect backdrop for a memorable getaway.</p>
+            <a href="vacation-packages.html" class="card-link">View packages →</a>
+          </div>
+        </article>
+
+        <article class="inspire-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #d7a06b, #7e8c6a);">🏔️</div>
+          <div class="card-body">
+            <span class="card-tag">Adventure</span>
+            <h3>Cozy Mountain Getaways</h3>
+            <p>Cabins, crisp air, and scenic trails offer the ideal rest-and-reset weekend for couples and families alike.</p>
+            <a href="rail-vacations.html" class="card-link">See rail escapes →</a>
+          </div>
+        </article>
+
+        <article class="inspire-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #c77d52, #b37a3d);">🏰</div>
+          <div class="card-body">
+            <span class="card-tag">Europe</span>
+            <h3>European Cities in Autumn</h3>
+            <p>Cosy cafés, historical streets, and fewer crowds make fall one of the best seasons to explore Europe.</p>
+            <a href="featured-deals.html" class="card-link">Get inspired →</a>
+          </div>
+        </article>
+
+        <article class="inspire-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #b96e45, #b37a3d);">🚢</div>
+          <div class="card-body">
+            <span class="card-tag">Cruises</span>
+            <h3>Best Fall Cruise Routes</h3>
+            <p>Explore scenic itineraries and warm-weather stops while avoiding peak-season crowds and high prices.</p>
+            <a href="msc-cruises.html" class="card-link">Explore cruises →</a>
+          </div>
+        </article>
+
+        <article class="inspire-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #7e8c6a, #d7a06b);">🎒</div>
+          <div class="card-body">
+            <span class="card-tag">Tips</span>
+            <h3>Packing for Autumn Travel</h3>
+            <p>Prepare for cooler nights, layered outfits, and the perfect balance of comfort and style for your next trip.</p>
+            <a href="index.html#contact" class="card-link">Plan with us →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" style="color: var(--orange-deep);">Travel Spotlight</p>
+        <h2>Favorite recent inspiration</h2>
+      </div>
+
+      <div class="feature-wrap">
+        <div class="feature-panel">
+          <div class="feature-photo"></div>
+          <div class="feature-copy">
+            <h3>Road-trip escapes that feel effortless</h3>
+            <p>Planning a golden-season getaway is easier when the route is scenic, the accommodations are comfortable, and the stops are memorable. From mountain towns to beachside weekend escapes, there are countless ways to make travel feel both simple and special.</p>
+            <div class="mini-list">
+              <span>Weekend</span>
+              <span>Scenic</span>
+              <span>Relaxed</span>
+            </div>
+            <a href="vacation-packages.html" class="btn btn-primary">See package ideas</a>
+          </div>
+        </div>
+
+        <div class="note-stack">
+          <div class="note-card">
+            <h4>Best places to go this season</h4>
+            <p>Think coastal retreats, mountain cabins, resort towns, and scenic rail routes with premium accommodations and flexible planning.</p>
+          </div>
+
+          <div class="note-card">
+            <h4>Best for couples</h4>
+            <p>Romantic waterfront hotels, private resort experiences, and curated train or cruise additions can turn a simple trip into a meaningful escape.</p>
+          </div>
+
+          <div class="note-card">
+            <h4>Best for families</h4>
+            <p>Choose destinations with easy access, kid-friendly activities, and comfortable lodging so everyone can enjoy the trip without stress.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <p class="eyebrow">Start Planning</p>
+      <h2>Need help turning inspiration into a trip?</h2>
+      <p>Whether you're dreaming of a cruise, a resort getaway, a scenic rail journey, or a custom vacation package, Newson Travel 1 can help build the perfect itinerary.</p>
+      <div class="button-row">
+        <a href="https://expedia.com/shop/newson-travel1" target="_blank" rel="noopener noreferrer" class="btn btn-light">Book with Expedia</a>
+        <a href="index.html#contact" class="btn btn-primary">Talk to an advisor</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" style="color: white;">
+          <img src="logo.png" alt="Newson Travel 1 LLC logo" style="width: 52px; height: 52px;" />
+          <span>Newson Travel 1 LLC</span>
+        </a>
+        <p>Travel inspiration, custom planning, curated escapes, and memorable journeys for every season.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="featured-deals.html">Featured Deals</a>
+        <a href="vacation-packages.html">Vacation Packages</a>
+        <a href="rail-vacations.html">Rail Vacations</a>
+        <a href="travel-inspiration.html">Inspiration</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Cruises</h4>
+        <a href="ncl-cruises.html">Norwegian</a>
+        <a href="royal-caribbean.html">Royal Caribbean</a>
+        <a href="virgin-voyages.html">Virgin Voyages</a>
+        <a href="msc-cruises.html">MSC Cruises</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="tel:+16013319414">601-331-9414</a>
+        <a href="mailto:youragent1@newsontravel1.com">youragent1@newsontravel1.com</a>
+        <a href="AVUS_Rail-Getaways_Resource_Flyer_TA.pdf" target="_blank" rel="noopener noreferrer">Rail Flyer</a>
+        <a href="Celebration Key Editable Flyer.pdf" target="_blank" rel="noopener noreferrer">Cruise Flyer</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Newson Travel 1 LLC. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
